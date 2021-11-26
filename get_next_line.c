@@ -6,10 +6,9 @@
 /*   By: apadilha <apadilha@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 16:13:42 by apadilha          #+#    #+#             */
-/*   Updated: 2021/11/26 16:14:24 by apadilha         ###   ########.fr       */
+/*   Updated: 2021/11/26 16:27:18 by apadilha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "get_next_line.h"
 

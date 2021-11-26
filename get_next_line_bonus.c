@@ -6,11 +6,9 @@
 /*   By: apadilha <apadilha@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 16:14:44 by apadilha          #+#    #+#             */
-/*   Updated: 2021/11/26 16:15:36 by apadilha         ###   ########.fr       */
+/*   Updated: 2021/11/26 16:26:29 by apadilha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
 
 #include "get_next_line_bonus.h"
 
