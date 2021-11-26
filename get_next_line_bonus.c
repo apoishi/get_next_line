@@ -5,14 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: apadilha <apadilha@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/24 12:21:11 by apadilha          #+#    #+#             */
-/*   Updated: 2021/11/26 15:51:32 by apadilha         ###   ########.fr       */
+/*   Created: 2021/11/26 16:14:44 by apadilha          #+#    #+#             */
+/*   Updated: 2021/11/26 16:15:36 by apadilha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
 
-static void	free_ptr(char**ptr)
+
+#include "get_next_line_bonus.h"
+
+static void	free_ptr(char **ptr)
 {
 	free(*ptr);
 	*ptr = NULL;
@@ -42,7 +44,7 @@ static int	read_text(int fd, char **buffer, char **buffer_backup)
 	bytes_read = 1;
 	while (!ft_strchr(*buffer_backup, '\n') && bytes_read)
 	{
-		bytes_read = read(fd,*buffer, BUFFER_SIZE);
+		bytes_read = read(fd, *buffer, BUFFER_SIZE);
 		if (bytes_read == -1)
 			return (bytes_read);
 		(*buffer)[bytes_read] = '\0';
@@ -58,10 +60,10 @@ static char	*get_line(int fd, char **buffer, char **buffer_backup)
 	int		bytes_read;
 	char	*temp_free;
 
-	if (ft_strchr (*buffer_backup, '\n'))
+	if (ft_strchr(*buffer_backup, '\n'))
 		return (split_line(buffer_backup));
 	bytes_read = read_text(fd, buffer, buffer_backup);
-	if ((bytes_read == 0 || bytes_read == -1) && !*buffer_backup)
+	if ((bytes_read == 0 || bytes_read == -1) && !**buffer_backup)
 	{
 		free_ptr(buffer_backup);
 		return (NULL);
@@ -79,9 +81,9 @@ static char	*get_line(int fd, char **buffer, char **buffer_backup)
 
 char	*get_next_line(int fd)
 {
-	static char	*buffer_backup[OPEN_MAX + 1];
-	char		*buffer;
-	char		*result;
+	static char		*buffer_backup[OPEN_MAX + 1];
+	char			*buffer;
+	char			*result;
 
 	if (fd < 0 || BUFFER_SIZE <= 0 || fd > OPEN_MAX)
 		return (NULL);
