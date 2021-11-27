@@ -6,11 +6,11 @@
 /*   By: apadilha <apadilha@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 12:20:17 by apadilha          #+#    #+#             */
-/*   Updated: 2021/11/24 12:20:47 by apadilha         ###   ########.fr       */
+/*   Updated: 2021/11/27 15:55:45 by apadilha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 size_t	ft_strlen(const char *s)
 {
